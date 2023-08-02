@@ -1,4 +1,4 @@
-#include <stdio.>
+#include <stdio.h>
 #include <stdlib.h>
 
 int calculate(int bottom, int top) {
