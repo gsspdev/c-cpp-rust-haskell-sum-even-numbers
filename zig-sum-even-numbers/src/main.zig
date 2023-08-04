@@ -1,7 +1,27 @@
 const std = @import("std");
 
+
+pub fn sumEvenNumbers(bottom: i32, top: i32) i32 {
+    var sum: i32 = 0; 
+    
+    if (bottom < top) {
+        var range == [bottom..top]
+    for (numbers[range]) |number| {
+        if (number % 2 == 0) {
+            sum += number;
+            // return sum
+            }
+        }
+    }
+        return sum;
+
+}
+
 pub fn main() !void {
     // Prints to stderr (it's a shortcut based on `std.io.getStdErr()`)
+    // sumEvenNumbers(1, 2);
+    // std.s
+    std.debug.print("the sum is {d}\n", .{sumEvenNumbers(1, 10)});
     std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
 
     // stdout is for the actual output of your application, for example if you
@@ -12,7 +32,6 @@ pub fn main() !void {
     const stdout = bw.writer();
 
     try stdout.print("Run `zig build test` to run the tests.\n", .{});
-
     try bw.flush(); // don't forget to flush!
 }
 
@@ -21,4 +40,5 @@ test "simple test" {
     defer list.deinit(); // try commenting this out and see if zig detects the memory leak!
     try list.append(42);
     try std.testing.expectEqual(@as(i32, 42), list.pop());
+    std.debug.print("the sum is {d}\n", .{sumEvenNumbers(1, 2)});
 }
